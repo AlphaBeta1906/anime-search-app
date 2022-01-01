@@ -1,5 +1,4 @@
 import m from "mithril"
-import u from "umbrellajs"
 
 var state = {
 	query: "",
@@ -16,7 +15,6 @@ var Fetch = {
 		}).then(function(datas){
 			state.data = datas["results"]
 			state.loading=false
-			u("input").val("")
 		}).catch(function(e){
 			state.error = e.message			
 		})
