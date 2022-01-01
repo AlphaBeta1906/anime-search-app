@@ -37,7 +37,7 @@ var Card = {
 				         m("span.d-block","score : ",vnode.attrs.score))
 					  ),
 					  m("footer",
-					  	m("a.text-decoration-none",{href:vnode.attrs.url},"see at myanimelist > "))
+					  	m("a.text-decoration-none",{href:vnode.attrs.url,target:"_blank"},"see at myanimelist > "))
 					 )
 				)
 	}
@@ -47,7 +47,7 @@ var Content = {
 		return m(".row",
 			state.loading?m("",{ "aria-busy":"true"},"loading")
 			:
-			 state.error?m("p",state.error):state.data.slice(0,10).map(function(anime){
+			 state.error?m("p",state.error):state.data.slice(0,9).map(function(anime){
 				return m(Card,
 							{
 								title:anime.title,
