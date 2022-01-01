@@ -18,7 +18,7 @@ var Fetch = {
 			state.loading=false
 			u("input").val("")
 		}).catch(function(e){
-			Fetch.error = e.message			
+			state.error = e.message			
 		})
 		
 	}
@@ -28,7 +28,7 @@ var Card = {
 	view: function(vnode){
 		return m(".col-lg-4 col-md-5 col-sm-6 py-1",
 					m("article.left",{style:"text-align:left;"},
-					   m("img.w-100",{src:vnode.attrs.image_url,style:"height:45%;"}),
+					   m("img.w-100",{src:vnode.attrs.image_url,style:"height:45%;",loading:"lazy"}),
 					   m(".pt-3",
 					 	 m("h4",vnode.attrs.title),
 				         m("span.d-block","airing status : ",m("span",vnode.attrs.airing?"airing":"finish"),
