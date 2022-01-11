@@ -1,6 +1,10 @@
-// Babel has deprecated @babel/polyfill, and the following two imports are used for polyfills instead.
 import m from "mithril"
-import { MainView } from "./MainView"
+import $ from "jquery"
+import { MainView,theme } from "./MainView"
+
+
+$("html").attr("data-theme", theme)
+$(theme == "dark" ? "#light" : "#dark").attr("disabled", "disabled")
 
 var Container = {
 	view: function(){
