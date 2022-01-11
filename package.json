@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.17.2",
+    "jquery": "^3.6.0",
     "mithril": "^2.0.4",
     "regenerator-runtime": "^0.13.9",
     "umbrellajs": "^3.2.3"
