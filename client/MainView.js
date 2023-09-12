@@ -14,8 +14,9 @@ var Fetch = {
 			method: "GET",
 			url: `https://api.jikan.moe/v4/anime?q=${state.query}`
 		}).then(function(datas){
-			state.data = datas["results"]
-			state.loading=false
+			state.data = datas["data"]
+			state.loading = false
+      console.log(state.data)
 		}).catch(function(e){
 			state.error = e.message			
 		})
@@ -51,7 +52,7 @@ var Content = {
 							{
 								title:anime.title,
 								image:anime,
-								image_url:anime.image_url,
+								image_url:anime.images.webp.image_url,
 								airing:anime.airing,
 								episodes:anime.episodes,
 								score:anime.score,

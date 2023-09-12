@@ -1,11 +1,12 @@
 import m from "mithril"
 import $ from "jquery"
 
-const theme = localStorage.getItem("theme") === null ? "ligth" : localStorage.getItem("theme")
+const theme = localStorage.getItem("theme") === null ? "light" : localStorage.getItem("theme")
 
 
 const Nav = {
   view: function () {
+    console.log($("html").attr("data-theme"))
     return m("nav",
       m("ul",
         m("li", m("h3", "Logo"))
