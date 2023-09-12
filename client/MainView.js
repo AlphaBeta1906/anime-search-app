@@ -12,7 +12,7 @@ var Fetch = {
 	fetch: function(){
 		m.request({
 			method: "GET",
-			url: `https://api.jikan.moe/v3/search/anime?q=${state.query}`
+			url: `https://api.jikan.moe/v4/search/anime?q=${state.query}`
 		}).then(function(datas){
 			state.data = datas["results"]
 			state.loading=false
